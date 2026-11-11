@@ -1,0 +1,26 @@
+.label-sheet{background:repeating-linear-gradient(135deg,#F1F1F2 0 8px,#E9E9EB 8px 16px);border-radius:6px;padding:16px 14px 10px}
+.qlabel{background:#fff;border-radius:4px;display:grid;grid-template-columns:100px 1fr;gap:12px;align-items:center;padding:16px 12px 10px 10px;position:relative;
+  box-shadow:0 1px 0 #CFCFD3,0 6px 14px -8px rgba(20,20,20,.35);aspect-ratio:2/1;max-width:340px;margin:0 auto;overflow:hidden}
+.qstripe{position:absolute;left:0;right:0;top:0;height:6px;display:grid;grid-template-columns:1fr 1fr 1fr}
+.qstripe i:nth-child(1){background:var(--ssf-grey)} .qstripe i:nth-child(2){background:var(--ssf-black)} .qstripe i:nth-child(3){background:var(--ssf-red)}
+.qr-svg{width:100%;height:auto;display:block}
+.qtext{display:grid;gap:2px;min-width:0}
+.qid{font-family:var(--slab);font-weight:800;font-size:1.45rem;line-height:1}
+.qitem{font-weight:700;font-size:1rem;margin-top:2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.qvar{font-size:.78rem;font-weight:600;color:var(--ink-2);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.qmeta{font-size:.72rem;color:var(--ink-2)}
+.qorg{font-size:.7rem;color:var(--ink-3);border-top:1px solid var(--rule);padding-top:4px;margin-top:4px}
+.label-actions{display:flex;justify-content:space-between;align-items:center;max-width:340px;margin:10px auto 0}
+.labels-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
+.labels-grid .qlabel{margin:0}
+
+/* ---------- Print: labels only ---------- */
+#print-area{display:none}
+@media print{
+  @page{size:4in 2in;margin:0}
+  body{background:#fff}
+  .app,.toast,dialog{display:none!important}
+  #print-area{display:block}
+  #print-area .qlabel{width:4in;height:2in;max-width:none;aspect-ratio:auto;box-shadow:none;border-radius:0;page-break-after:always;break-after:page;grid-template-columns:1.45in 1fr;padding:.22in .18in .12in .14in;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  #print-area .qid{font-size:26pt} #print-area .qitem{font-size:14pt} #print-area .qvar{font-size:10pt}
+}

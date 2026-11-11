@@ -1,0 +1,20 @@
+/* ---------- Gaming room ---------- */
+tr.todo td{background:repeating-linear-gradient(135deg,transparent 0 6px,#F5F5F6 6px 8px)}
+.eid{font-family:var(--slab);font-weight:700;font-size:.78rem}
+.prog{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+.prog .bar{flex:1;height:8px;background:#E8E8EA;border-radius:4px;overflow:hidden;display:flex;gap:2px}
+.prog .bar i{display:block;height:100%}
+.prog span{font-size:.8rem;color:var(--ink-2);white-space:nowrap}
+.findings{display:grid;gap:6px}
+.finding{display:grid;grid-template-columns:1fr auto;gap:2px 8px;font-size:.84rem;padding:8px 10px;background:var(--soft);border-radius:6px;align-items:center}
+.finding small{font-size:.74rem;color:var(--ink-3)}
+.finding .fa{grid-row:span 2;display:flex;flex-direction:column;align-items:end;gap:4px}
+details.closed{margin-top:10px;font-size:.8rem;color:var(--ink-2)}
+details.closed summary{cursor:pointer}
+details.closed ul{margin:6px 0 0;padding-left:16px}
+.cols{display:grid;grid-template-columns:repeat(10,1fr);gap:4px;align-items:end;height:64px;border-bottom:1.5px solid var(--ink);position:relative;margin-top:16px}
+.cols::after{content:"";position:absolute;left:0;right:0;top:0;border-top:1px dashed var(--ink-3)}
+.cols::before{content:"Full audit";position:absolute;right:0;top:-15px;font-size:.66rem;color:var(--ink-3)}
+.cols i{display:block;background:#A6A7AC;border-radius:3px 3px 0 0}
+.cols i.today{background:var(--ink)} .cols i.short{background:#B07A00}
+.cols-x{display:grid;grid-template-columns:repeat(10,1fr);gap:4px;font-size:.64rem;color:var(--ink-3);text-align:center;margin-top:4px}

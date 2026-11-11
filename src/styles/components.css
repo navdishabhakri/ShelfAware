@@ -1,0 +1,231 @@
+.chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: .74rem;
+    font-weight: 650;
+    padding: 1px 7px;
+    border-radius: 999px;
+    white-space: nowrap
+}
+
+.chip::before {
+    font-size: .75em
+}
+
+.chip.crit {
+    background: var(--crit-bg);
+    color: var(--crit)
+}
+
+.chip.crit::before {
+    content: "\25B2"
+}
+
+.chip.warn {
+    background: var(--warn-bg);
+    color: var(--warn)
+}
+
+.chip.warn::before {
+    content: "\25CF"
+}
+
+.chip.good {
+    background: var(--good-bg);
+    color: var(--good)
+}
+
+.chip.good::before {
+    content: "\2713"
+}
+
+.chip.info {
+    background: var(--info-bg);
+    color: var(--info)
+}
+
+.chip.info::before {
+    content: "\25C6"
+}
+
+.boxid {
+    font-family: var(--slab);
+    font-weight: 700;
+    font-size: .76rem;
+    background: var(--ssf-black);
+    color: #fff;
+    padding: 1px 6px;
+    border-radius: 2px;
+    white-space: nowrap;
+    letter-spacing: .02em
+}
+
+.boxid.none {
+    background: transparent;
+    border: 1px dashed var(--ink-3);
+    color: var(--ink-3);
+    font-family: inherit;
+    font-weight: 600
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    border: 0;
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-weight: 650;
+    font-size: .86rem;
+    cursor: pointer;
+    background: var(--ssf-black);
+    color: #fff;
+    white-space: nowrap
+}
+
+.btn:hover {
+    background: #333
+}
+
+.btn.alt {
+    background: var(--soft);
+    color: var(--ink);
+    border: 1px solid var(--rule)
+}
+
+.btn.alt:hover {
+    background: #EAEAEC
+}
+
+.btn.red {
+    background: var(--ssf-red);
+    color: #fff
+}
+
+.btn.red:hover {
+    background: var(--ssf-red-ink)
+}
+
+.btn.danger {
+    color: var(--crit)
+}
+
+.btn.small {
+    padding: 4px 9px;
+    font-size: .78rem;
+    background: transparent;
+    color: var(--ink);
+    border: 1px solid var(--rule)
+}
+
+.btn.small:hover {
+    background: var(--soft)
+}
+
+.btn[disabled] {
+    opacity: .45;
+    cursor: not-allowed
+}
+
+.tools {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-bottom: 8px;
+    flex-wrap: wrap
+}
+
+.search {
+    flex: 1;
+    min-width: 140px;
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    padding: 6px 10px;
+    font-size: .86rem;
+    background: #fff
+}
+
+.fchips {
+    display: flex;
+    gap: 4px
+}
+
+.fchips button {
+    font-size: .78rem;
+    padding: 4px 10px;
+    border-radius: 999px;
+    border: 1px solid var(--rule);
+    cursor: pointer;
+    background: #fff
+}
+
+.fchips button[aria-pressed=true] {
+    background: var(--ssf-black);
+    color: #fff;
+    border-color: var(--ssf-black)
+}
+
+.empty {
+    padding: 22px 8px;
+    text-align: center;
+    color: var(--ink-3);
+    font-size: .86rem
+}
+
+.hint {
+    font-size: .74rem;
+    color: var(--ink-3)
+}
+
+/* ---------- Tables ---------- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .86rem
+}
+
+th {
+    text-align: left;
+    font-weight: 600;
+    color: var(--ink-3);
+    font-size: .74rem;
+    padding: 0 8px 6px 0;
+    border-bottom: 1.5px solid var(--ink)
+}
+
+td {
+    padding: 6px 8px 6px 0;
+    border-bottom: 1px solid #EBEBED;
+    vertical-align: middle
+}
+
+tr:last-child td {
+    border-bottom: 0
+}
+
+td.n,
+th.n {
+    text-align: right
+}
+
+.tscroll {
+    position: relative;
+    overflow: auto
+}
+
+.tscroll table {
+    min-width: 480px
+}
+
+.tscroll.tall {
+    max-height: 440px
+}
+
+.tscroll.tall thead th {
+    position: sticky;
+    top: 0;
+    background: #fff;
+    z-index: 1
+}

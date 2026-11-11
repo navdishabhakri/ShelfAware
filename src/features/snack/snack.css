@@ -1,0 +1,50 @@
+/* ---------- Snack stand ---------- */
+.shelf{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;padding:10px;background:#2B2B2E;border-radius:6px;margin-bottom:12px}
+.slot{background:#3C3C40;border-radius:4px;padding:8px 6px;color:#fff;text-align:center;transition:box-shadow .2s}
+.slot b{display:block;font-family:var(--slab);font-size:1.15rem;font-weight:700;line-height:1.2}
+.slot small{display:block;font-size:.68rem;color:#BDBDC2}
+.slot.review{box-shadow:inset 0 0 0 2px #F5C518}
+.slot.blocked{box-shadow:inset 0 0 0 2px var(--ssf-red);background:repeating-linear-gradient(135deg,#3C3C40 0 6px,#343438 6px 12px)}
+.metrics{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule);border-radius:6px;overflow:hidden}
+.metrics div{background:var(--soft);padding:10px 12px}
+.metrics b{display:block;font-family:var(--slab);font-weight:700;font-size:1.3rem;font-variant-numeric:tabular-nums}
+.metrics span{font-size:.74rem;color:var(--ink-3)}
+.log{list-style:none;margin:0;padding:0;max-height:260px;overflow:auto}
+.log li{display:grid;grid-template-columns:48px 1fr;gap:8px;padding:6px 0;border-bottom:1px solid #EBEBED;font-size:.82rem}
+.log li:last-child{border-bottom:0}
+.log time{color:var(--ink-3);font-size:.76rem}
+
+
+/* ---------- Sales ---------- */
+
+.section-break{grid-column:span 12;display:flex;align-items:center;gap:12px;margin-top:6px;flex-wrap:wrap}
+.section-break h3{font-family:var(--slab);font-size:1.2rem;font-weight:700}
+.section-break .fchips{margin-left:auto}
+.sq{display:inline-flex;align-items:center;gap:7px;font-size:.8rem;color:var(--ink-2);background:var(--sheet);border-radius:999px;padding:3px 10px}
+.sq::before{content:"";width:7px;height:7px;border-radius:50%;background:#4CC38A}
+.sales-kpis{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));border-bottom:1px solid var(--rule);margin:-14px -16px 14px}
+.sales-kpis div{padding:12px 16px;border-right:1px solid var(--rule)}
+.sales-kpis div:last-child{border-right:0}
+.sales-kpis b{display:block;font-family:var(--slab);font-weight:700;font-size:1.35rem;line-height:1.2;font-variant-numeric:tabular-nums}
+.sales-kpis span{font-size:.74rem;color:var(--ink-3)}
+.sales-kpis em{font-style:normal;font-weight:650}
+.sales-kpis em.up{color:var(--good)} .sales-kpis em.down{color:var(--crit)}
+.sales-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:22px}
+.sbars{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:5px;align-items:end;height:130px;border-bottom:1.5px solid var(--ink)}
+.sbars i{display:block;background:var(--ink-2);border-radius:3px 3px 0 0;min-height:0;position:relative}
+.sbars i.now{background:var(--ssf-red)}
+.sbars i.future{background:repeating-linear-gradient(135deg,#F0F0F1 0 5px,transparent 5px 7px);height:100%!important;border-radius:0}
+.sbars-x{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:5px;font-size:.66rem;color:var(--ink-3);text-align:center;margin-top:4px}
+.top{display:grid;gap:9px}
+.top-r{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:3px 8px;font-size:.84rem;align-items:baseline}
+.top-r strong{font-weight:600}
+.top-r span{font-variant-numeric:tabular-nums;color:var(--ink-2);font-size:.8rem}
+.top-r span b{color:var(--ink)}
+.top-r .track{grid-column:1/-1;height:6px;background:#E8E8EA;border-radius:3px;overflow:hidden}
+.top-r .track i{display:block;height:100%;background:var(--ink-2);border-radius:3px}
+.top-r:first-child .track i{background:var(--ssf-red)}
+.pay li{grid-template-columns:44px 1fr auto}
+.pay b{font-variant-numeric:tabular-nums}
+.pay small{display:block;color:var(--ink-3);font-size:.72rem}
+@media (max-width:1080px){.sales-grid{grid-template-columns:1fr}.sales-kpis{grid-template-columns:repeat(3,1fr)}.sales-kpis div:nth-child(3){border-right:0}.sales-kpis div:nth-child(-n+3){border-bottom:1px solid var(--rule)}}
+@media (max-width:600px){.sales-kpis{grid-template-columns:repeat(2,1fr)}.sales-kpis div{border-right:1px solid var(--rule)!important;border-bottom:1px solid var(--rule)}.sales-kpis div:nth-child(2n){border-right:0!important}}

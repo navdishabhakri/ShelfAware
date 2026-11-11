@@ -1,0 +1,266 @@
+/* ---------- Dialog ---------- */
+dialog {
+  border: 0;
+  border-radius: 10px;
+  padding: 0;
+  width: min(440px, calc(100vw - 24px));
+  box-shadow: 0 20px 50px -12px rgba(0, 0, 0, .4);
+  color: var(--ink)
+}
+
+dialog.wide {
+  width: min(720px, calc(100vw - 24px))
+}
+
+dialog::backdrop {
+  background: rgba(20, 20, 20, .45)
+}
+
+.dlg-form {
+  display: grid
+}
+
+.dlg-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--rule)
+}
+
+.dlg-head h3 {
+  font-family: var(--slab);
+  font-size: 1.1rem;
+  font-weight: 700;
+  flex: 1
+}
+
+.dlg-head .x {
+  background: none;
+  border: 0;
+  font-size: 1.3rem;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--ink-3);
+  padding: 2px 6px
+}
+
+.dlg-body {
+  padding: 16px 18px;
+  display: grid;
+  gap: 12px;
+  max-height: 68vh;
+  overflow: auto
+}
+
+.dlg-err {
+  color: var(--crit);
+  font-size: .84rem;
+  font-weight: 600;
+  padding: 0 18px
+}
+
+.dlg-err:empty {
+  display: none
+}
+
+.dlg-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  padding: 12px 18px 16px
+}
+
+.field {
+  display: grid;
+  gap: 5px
+}
+
+.field>span {
+  font-size: .84rem;
+  font-weight: 600
+}
+
+.field input,
+.field select,
+.field textarea {
+  border: 1.5px solid var(--rule);
+  border-radius: 7px;
+  padding: 8px 10px;
+  background: #fff;
+  width: 100%
+}
+
+.field textarea {
+  min-height: 64px;
+  resize: vertical
+}
+
+.field input[type=checkbox],
+.check input {
+  width: auto;
+  margin: 0
+}
+
+.mbox .boxid {
+  color: #fff
+}
+
+.two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px
+}
+
+.check {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: .86rem
+}
+
+.seg {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  gap: 6px
+}
+
+.seg label {
+  position: relative;
+  border: 1.5px solid var(--rule);
+  border-radius: 7px;
+  padding: 8px 6px;
+  text-align: center;
+  font-size: .86rem;
+  font-weight: 600;
+  cursor: pointer
+}
+
+.seg input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  margin: 0;
+  cursor: pointer
+}
+
+.seg label:has(input:checked) {
+  border-color: var(--ssf-black);
+  background: var(--ssf-black);
+  color: #fff
+}
+
+.seg label:has(input:focus-visible) {
+  outline: 2px solid var(--received);
+  outline-offset: 2px
+}
+
+.seg label:has(input:disabled) {
+  opacity: .4;
+  cursor: not-allowed
+}
+
+.mbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  background: var(--soft);
+  border-radius: 8px
+}
+
+.mbox div {
+  flex: 1;
+  min-width: 0
+}
+
+.mbox strong {
+  display: block
+}
+
+.mbox span {
+  font-size: .82rem;
+  color: var(--ink-2)
+}
+
+.mbox .big {
+  font-family: var(--slab);
+  font-weight: 800;
+  font-size: 1.4rem
+}
+
+.preview {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1.5px dashed var(--rule);
+  padding-top: 10px;
+  font-size: .88rem;
+  color: var(--ink-2)
+}
+
+.preview:empty {
+  display: none
+}
+
+.preview b {
+  font-family: var(--slab);
+  font-size: 1.1rem;
+  color: var(--ink)
+}
+
+.cam {
+  background: #000;
+  border-radius: 8px;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  position: relative
+}
+
+.cam video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block
+}
+
+.cam::after {
+  content: "";
+  position: absolute;
+  inset: 22%;
+  border: 2px solid rgba(255, 255, 255, .8);
+  border-radius: 10px
+}
+
+.cam-msg {
+  font-size: .82rem;
+  color: var(--ink-2)
+}
+
+.notes {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 6px
+}
+
+.notes li {
+  font-size: .82rem;
+  background: var(--soft);
+  border-radius: 6px;
+  padding: 7px 10px
+}
+
+.notes time {
+  color: var(--ink-3);
+  font-size: .74rem;
+  display: block
+}
+
+@media (max-width:760px) {
+  .two {
+    grid-template-columns: 1fr
+  }
+}

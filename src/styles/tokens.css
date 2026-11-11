@@ -1,0 +1,10 @@
+:root{
+  /* SSF brand, sampled from the logo */
+  --ssf-grey:#818287; --ssf-black:#141414; --ssf-red:#EF4536; --ssf-red-ink:#C42E1F;
+  --ground:#EDEDEE; --sheet:#FFFFFF; --ink:#141414; --ink-2:#4B4C52; --ink-3:#74757B; --rule:#DCDCDF; --soft:#F5F5F6;
+  --received:#2563B8; --issued:#C9781A;
+  --good:#23704A; --warn:#8A5A00; --crit:#B42318;
+  --crit-bg:#FBE7E4; --warn-bg:#FFF4CC; --good-bg:#E2F1E8; --info-bg:#E3ECF8; --info:#1D4F93;
+  --slab:"Roboto Slab",Georgia,serif;
+  --r:8px;
+}
